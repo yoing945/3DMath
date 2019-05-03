@@ -48,4 +48,26 @@ public:
 
 	//向量标准化
 	void normallize();
+
+	//向量点乘
+	float operator *(const Vector3 &a);
+
 };
+
+/*----------------------非成员函数----------------------*/
+
+//求向量模
+inline float vectorMag(const Vector3 &a);
+
+//计算两向量的叉乘
+inline Vector3 crossProduct(const Vector3 &a, const Vector3 &b);
+
+//标量左乘
+inline Vector3 operator * (float k, const Vector3 &a);
+
+//计算两点间距
+inline float distance(const Vector3 &a, const Vector3 &b);
+
+/*----------------------非成员函数----------------------*/
+//全局零向量
+extern const Vector3 kZeroVector;
